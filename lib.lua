@@ -38,7 +38,7 @@ local Library = {
     RiskColor = Color3.fromRGB(148, 15, 64),
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.Code,
+    Font = Enum.Font.RobotoMono,
 
     OpenedFrames = {};
     DependencyBoxes = {};
