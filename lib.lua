@@ -9,13 +9,14 @@ local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
 
-local ProtectGui = gethui or (syn and syn.protect_gui) or (function() end);
+local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
+local GParent = gethui and gethui() or (CoreGui or game.Players.LocalPlayer:WaitForChild("PlayerGui"))
 
 local ScreenGui = Instance.new('ScreenGui');
 ProtectGui(ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.Parent = CoreGui;
+ScreenGui.Parent = GParent;
 
 local Toggles = {};
 local Options = {};
